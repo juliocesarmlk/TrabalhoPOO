@@ -8,7 +8,7 @@ public class ListaTarefas {
       System.out.println("Tamanho: "+ tamanho);
    }
    
-   public void ListaTarefas(){
+   public ListaTarefas(){
       this.cabecalho = new No();
       this.fim = new No();
       cabecalho.setProximo(fim);

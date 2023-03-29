@@ -18,6 +18,7 @@ public class Tarefa{
    private String descricao;
    private Date dataInicio;
    private boolean status;
+   private int numTarefa;
 
 //Metodos set
    
@@ -35,7 +36,6 @@ public class Tarefa{
    }
  
 // Metodos get
-
    public boolean getStatus(){
       return status;
    } 
@@ -51,4 +51,3 @@ public class Tarefa{
    
 
    }
-

@@ -1,28 +1,27 @@
 import java.util.Date;
-import java.util.Scanner;
+import java.util.UUID;
+import java.io.Serializable;
 
-public class Tarefa{
+public class Tarefa implements Serializable{
+//Declaração dos atributos
+
+   private String titulo;
+   private String descricao;
+   private Date dataInicio;
+   private String status;
+   private UUID idTarefa;
 
    public Tarefa(String titulo, String descricao){
       this.titulo = titulo;
       this.descricao = descricao;
       this.dataInicio = new Date();
-      this.status = false;
+      this.status = "Pendente";
+      this.idTarefa = UUID.randomUUID();
    }
-
-//Declaração dos atributos
-
-   Scanner leitor = new Scanner(System.in);
-
-   private String titulo;
-   private String descricao;
-   private Date dataInicio;
-   private boolean status;
-   private int numTarefa;
 
 //Metodos set
    
-   public void setStatus(boolean status){
+   public void setStatus(String status){
       this.status = status;
    }
    public void setDataInicio(Date dataInicio){
@@ -36,7 +35,7 @@ public class Tarefa{
    }
  
 // Metodos get
-   public boolean getStatus(){
+   public String getStatus(){
       return status;
    } 
    public Date getDataInicio(){
